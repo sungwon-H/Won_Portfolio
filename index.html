@@ -43,7 +43,8 @@
         <button class="home__contact"><i class="fas fa-arrow-circle-down"><a href="#skills"></a></i></button>
     </section>
     <!--자기소개-->
-    <section id="about" class="section">
+    <section id="about" >
+        <div class="section__container">
         <div class="about__profileBox">
             <img src="./img/profile.jpg" alt="H.profile photo" class="about__profileBox__avatar" width="50">
             <div class="about__profileBox__introBox">
@@ -59,21 +60,22 @@
                         </p>
             </div>
         </div>
-       
+    </div>
     </section>
     <!--스킬-->
-    <section id="skills" class="section">
-        <h1>Skills</h1>
+    <section id="skills" >
+        <div class="section__container">
+            <h1>Skills</h1>
         <div class="skillset">
             <div class="skillset__left">
                 <h3 class="skillset__title">Skills</h3>
                 <div class="skill">
                     <div class="skill__description">
                         <span>HTML</span>
-                        <span>80%</span>
+                        <span>85%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:85%"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -82,7 +84,7 @@
                         <span>80%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:80%"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -91,7 +93,7 @@
                         <span>70%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:70%"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -100,7 +102,7 @@
                         <span>50%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:50%"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -109,61 +111,71 @@
                         <span>50%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:50%"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <div class="skill__description">
                         <span>Java</span>
-                        <span>70%</span>
+                        <span>80%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:80%"></div>
                     </div>
                 </div>
             </div>
             <div class="skillset__right">
+
                 <div class="skillbox">
                     <h3 class="skillset__title">Front-end</h3>
-                    <div class="skillIcon">
-                        <i class="fab fa-html5" ></i>
-                        <i class="fab fa-css3-alt"></i>
+                    <div class="skill__Iconbox">
+                        
+                        <img src="./img/icon/html_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/css_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/js_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/react_icon.png" alt="html" class="skill__icon">
                     </div>
                 </div>
                 <div class="skillbox">
                     <h3 class="skillset__title">Back-end</h3>
-                    <div class="skillIcon">
-                        <i class="fab fa-node-js"></i>
-                        <i class="fab fa-java"></i>
+                    <div class="skill__Iconbox">
+                        <img src="./img/icon/nodejs_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/java_icon.png" alt="html" class="skill__icon">
                     </div>
                 </div>
                 <div class="skillbox">
                     <h3 class="skillset__title">DataBase</h3>
-                    <div class="skillIcon">
-                        <i class="fab fa-node-js"></i>
-                        <i class="fab fa-java"></i>
+                    <div class="skill__Iconbox">
+                        <img src="./img/icon/mysql_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/mongodb_cion.png" alt="html" class="skill__icon">
                     </div>
                 </div>
                 <div class="skillbox">
                     <h3 class="skillset__title">Tool & Etc</h3>
-                    <div class="skillIcon">
-                        <i class="fab fa-node-js"></i>
-                        <i class="fab fa-java"></i>
+                    <div class="skill__Iconbox">
+                        <img src="./img/icon/vsc_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/eclipse_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/git_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/atom_icon.png" alt="html" class="skill__icon">
+                        <img src="./img/icon/postman.png" alt="html" class="skill__icon">
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+        
     </section>
     <!--프로젝트소개-->
-    <section id="project" class="section">
-        <h1>Project</h1>
-        <div class="project__categories">
+    <section id="project" >
+        <div class="section__container"> 
+            <h1>Project</h1>
+            <div class="project__categories">
             <button class="category__btn">All <span class="category__count">3</span></button>
             <button class="category__btn">Front-end <span class="category__count">1</span></button>
             <button class="category__btn">Back-end <span class="category__count">0</span></button>
             <button class="category__btn">Mobile <span class="category__count">0</span></button>
-        </div>
-        <div class="project__view">
+            </div>
+            <div class="project__view">
 
             <div class="project__box">
 
@@ -257,24 +269,26 @@
         </div>    
            
         <!---나중에 슬라이드 만들 때 버튼은 이 곳에-->
-        </div>
+            </div>
+       </div> 
     </section>
     <!--연락처-->
-    <section id="contact" class="section">
-        <h1 class="contact__title">Contact Me</h1>
-        <h3 class="contact__info">hjp9058@gmail.com</h3>
-        <div class="contact__links">
-            <a href="https://github.com/sungwon-H" target="_blank">
-                <i class="fab fa-github-square"></i>
-            </a>
-            <a href="#" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <p class="contact__rights">
-                Copyright 2021. sungwon_H -  All pictures cannot be copied without permission
-            </p>
+    <section id="contact" >
+        <div class="section__container"> 
+            <h1 class="contact__title">Contact Me</h1>
+            <h3 class="contact__info">hjp9058@gmail.com</h3>
+            <div class="contact__links">
+                <a href="https://github.com/sungwon-H" target="_blank">
+                    <i class="fab fa-github-square"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <p class="contact__rights">
+                    Copyright 2021. sungwon_H -  All pictures cannot be copied without permission
+                </p>
+            </div>
         </div>
-        
     </section>
 </body>
 </html>

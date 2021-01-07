@@ -97,12 +97,10 @@ p{
     display: flex;
     justify-content: space-between;
     background-color: var(--color-indigo);
-    
     color: var(--color-light-white);
     align-items: center;
     padding:14px;
-    
-    
+    opacity: 0.8;
 }
 
 /*로고*/
@@ -143,30 +141,59 @@ p{
     
 }
 
+/*ToggleBtn*/
+.navbar__toggleBtn{
+    position: absolute;
+    top: 20px;/*20*/
+    right:32px;
+    font-size: 28px;
+    color: var(--color-dark-white);
+    background-color: var(--color-indigo);
+    border: none;
+    display: none;
+    outline:none;
+    cursor: pointer;
+}
+.navbar__toggleBtn:hover{
+    color: var(--color-light-white);
+}
+
 /*home*/
 
 #home{
-    background: url(./img/home_background.png) center/cover no-repeat;
-    padding: 350px;
+    background: url(./img/home-background.png) center/cover no-repeat;
     text-align: center;
+    height: 900px;
+    
 }
 
+
+.home_textbox{
+   
+    width:600px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 .home__title{
     margin-bottom: 30px;
+    
 }
 
 .home__title,
 .home__description{
-    color:var(--color-light-white)
-    
+    color:var(--color-light-white);
 }
+
 
 
 .home__contact{
     display: flex;
     align-items: center;
     justify-content: center;
-
     color:var(--color-lightindigo);
     width: 40px; 
     height: 40px; 
@@ -177,12 +204,14 @@ p{
     cursor: pointer;
     margin:0 auto;
     position: relative;
-    bottom:-300px;
+    bottom: -200px;
+    transition: all var(--animation-duration) ease-in;
+    
 }
 
 .home__contact:hover{
     color :var(--color-darkblue);
-    top: 310px;
+    top: 210px;
 }
 
 /*Section common (공통 중앙 정렬)*/
@@ -192,7 +221,6 @@ p{
     text-align: center;
     max-width: 1400px;
     margin:0 auto;
-   
 }
 
 
@@ -206,7 +234,6 @@ p{
 .about__profileBox{
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
     background-color:var(--color-custom-gray);
     color: var(--color-black);
     margin: 0 auto;
@@ -215,7 +242,6 @@ p{
     justify-content: center;
     align-items: center;
     box-shadow: 5px 7px 8px 3px #161617;
-    
 }
 .about__profileBox__avatar{
     position: relative;
@@ -225,13 +251,12 @@ p{
     margin-right: 50px;
     top:-80px;
     left:10px;
-    
 }
 .about__profileBox__introBox{
-    width: 600px;
     height: 450px;
     text-align: left;
     line-height: 32px;
+    padding: 20px;
 }
 .selfInt__title{
     font-size:var(--font-regular);
@@ -242,7 +267,10 @@ p{
     font-size: var(--font-small);
     font-weight: var(--weight-semi-bold);
 }
-
+/*m_about*/
+#m_about{
+    display: none;
+}
 /*Skill*/
 
 #skills{
@@ -357,16 +385,13 @@ p{
 /*Work*/
 #project{
     background-color: var(--color-custom-lightgray);
-  
 }
 #project h1{
-   
     margin-bottom: 50px;
 }
 
 .project__box{
     display: flex;
-   
     justify-content: space-between;
 }
 
@@ -507,4 +532,138 @@ p{
 .contact__rights{
     font-size: var(--font-micro);
     margin-top: 70px;
+}
+
+
+
+/*For bleow 768px screen width*/
+@media screen and (max-width: 768px){
+   
+    
+    .navbar__toggleBtn{
+        display: block;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    /*home*/
+    
+    
+    
+    #home{
+        height: 700px;
+    }
+    .home_textbox{
+        width:100%;
+    }
+
+    .home__title{
+        font-size:24px;
+    }
+   .home__description{
+    font-size:15px
+
+   }
+   .home__contact{
+    display: none;
+    }
+    /*m_about*/
+    #m_about{
+        display: flex;
+        height: 900px;
+        background-color: #17242d;
+        align-items: center;
+    }
+    .m_about__profileBox{
+
+        background-color: #DDDDD3;
+        margin:0px 15px;
+        border-radius: 15px;
+        box-shadow: 4px 4px 5px 3px rgb(216, 219, 202);
+    }
+    .m_about__profileBox__avatar{
+        display: flex;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        top: 5px;
+    }
+    .m_about__profileBox__introBox{
+        padding: 0px 10px;
+        font-weight: var(--weight-semi-bold);
+    }
+    .m_selfInt__title{
+        font-weight: var(--weight-bold);
+        font-size: 25px;
+    }
+    .m_selfInt__description{
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .m_description__history{
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .m_description__history li{
+        margin-bottom: 20px;
+    }
+
+    /*about*/
+    #about{
+        display: none;
+    }
+
+    /*skill*/
+
+    .skillset{
+        display: flex;
+        flex-direction: column;
+    }
+    .skillset__left{
+        width:100%;
+        margin-top: 50px;
+    }
+    .skillset__right{
+        display: none;
+    }
+
+
+    /*project*/
+
+    .project__box{
+        display: flex;
+        flex-direction: column;
+
+    }
+   .project__categories{
+       width:100%;
+       margin:0 auto;
+   }
+   .category__btn{
+       margin-bottom: 10px;
+       padding: 5px 20px;
+       
+   }
+   .project__view{
+       margin-top: 32px;
+   }
+   .project,
+   .project__img,
+   .project__descript{
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+   }
+   #contact{
+       height: 530px;
+   }
 }

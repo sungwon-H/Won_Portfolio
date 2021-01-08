@@ -13,3 +13,20 @@ document.addEventListener('scroll', ()=>{
         navbar.classList.remove('navbar--dark');
     }
 });
+
+
+// 해당 메뉴 클릭 시 이동 
+const navbarMenu = document.querySelector('.navbar__menu');
+
+navbarMenu.addEventListener('click', (event) =>{
+    const target = event.target;
+    const link = target.dataset.link;
+    if(link == null){ // 링크가 있는 경우만 
+        return;
+    }
+    console.log(event.target.dataset.link);
+
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({behavior:'smooth'});
+
+});

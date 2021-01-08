@@ -28,7 +28,8 @@ navbarMenu.addEventListener('click', (event) =>{
     scrollTo.scrollIntoView({behavior:'smooth'});
 
 });
-function contactBtn(){
+
+// contactBtn 클릭시 contact 메뉴로 이동 
 
 const contactBtn = document.querySelector('.home__contact');
 contactBtn.addEventListener('click',(event) => {
@@ -40,5 +41,4 @@ contactBtn.addEventListener('click',(event) => {
     scrollTo.scrollIntoView({behavior:'smooth'});
 });
 
-}
-contactBtn();
+

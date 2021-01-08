@@ -1,12 +1,11 @@
 'use strict';
 
-// navar 스크롤을 내리면 밝아 지면서 고정되어있다.
+// navar 스크롤을 내리면 투명해지면서 고정되어있다.
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', ()=>{
-    console.log(window.scrollY);
-    console.log(`navbarHeight:${navbarHeight}`);
+   
     if(window.scrollY > navbarHeight){
         navbar.classList.add('navbar--dark');
     }else{
@@ -39,6 +38,16 @@ contactBtn.addEventListener('click',(event) => {
     const link = target.dataset.link;
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior:'smooth'});
+});
+
+
+// 홈화면 스크롤시 투명
+
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', ()=>{
+    home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 

@@ -124,8 +124,6 @@ p{
 /*navmenu*/
 .navbar__menu{
     display: flex;
-    
-
 }
 
 /*Navbar item*/
@@ -182,6 +180,7 @@ p{
     width:600px;
     height: 500px;
     margin: 0 auto;
+    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -189,7 +188,7 @@ p{
 }
 .home__title{
     margin-bottom: 30px;
-    
+    margin-top: auto;
 }
 
 .home__title,
@@ -578,14 +577,14 @@ p{
         height: 750px;
     }
     .home_textbox{
-        display: flex;
+      
         width:100%;
         
         
     }
 
     .home__title{
-        margin-top:auto;
+       
         font-size:24px;
     }
    .home__description{

@@ -93,14 +93,20 @@ p{
 
 /*Navbar*/
 #navbar{
-    
+    position:fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: var(--color-indigo);
     color: var(--color-light-white);
     align-items: center;
-    padding:14px;
+    padding:5px;
     opacity: 0.8;
+    z-index: 1;
+}
+#navbar.navbar--dark{
+    background-color: var(--color-indigo);
+    opacity: 1;
 }
 
 /*로고*/
@@ -144,7 +150,7 @@ p{
 /*ToggleBtn*/
 .navbar__toggleBtn{
     position: absolute;
-    top: 20px;/*20*/
+    top: 10px;/*20*/
     right:32px;
     font-size: 28px;
     color: var(--color-dark-white);
@@ -558,7 +564,7 @@ p{
     
     
     #home{
-        height: 700px;
+        height: 600px;
     }
     .home_textbox{
         width:100%;
@@ -577,7 +583,7 @@ p{
     /*m_about*/
     #m_about{
         display: flex;
-        height: 900px;
+        height: 1000px;
         background-color: #17242d;
         align-items: center;
     }

@@ -456,7 +456,12 @@ p{
     flex-wrap: wrap;
     justify-content: center;
     flex-basis: 65%;
-    
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
+}
+.project__view.anim-out{
+    opacity: 0;
+    transform: scale(0.96) translateX(40px);
 }
 .project{
     display: flex;
@@ -470,7 +475,9 @@ p{
     align-items: center;
     border-radius: 10px;
 }
-
+.project.invisible{
+    display: none;
+}
 .project__img{
     max-width: 100%;
     max-height: 100%;

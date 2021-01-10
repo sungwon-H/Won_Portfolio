@@ -72,4 +72,31 @@ function scrollIntoView(selector){ //scrollIntoView함수 생성 링크 광역
 
 }
 
+// 프로젝트 카테고리 버튼 클릭 시 해당 자료만 보여주기 기능
+const workBtnContainer = document.querySelector('.project__categories');
+const projectContainer = document.querySelector('.project__view');
+// 프로젝트들을 배열로 가져온다
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) =>{
+    const filter = e.target.dataset.filter  || e.target.parentNode.dataset.filter; // 데이터가 없다면 parentNode의 데이터 필터 값을 사용함// 데이터 필터 값을 받아온다.
+    if(filter == null){
+        return;
+    }
+    projectContainer.classList.add('anim-out'); // 에니메이션 등록
+    projects.forEach((project) =>{
+        console.log(project.dataset.type);
+        if(filter === '*' || filter=== project.dataset.type){ // 필터가 전부이거나, 클릭한 필터와 데이터타입이매칭하면 보여줌
+            project.classList.remove('invisible');
+
+        }else{
+            project.classList.add('invisible');// 필터랑 동일하면 안보여져야되니까 클래스 생성 
+        }
+    }); 
+    setTimeout(() => {
+        projectContainer.classList.remove('anim-out'); // 3초뒤에 클래스를 지워줘야 opacity가 남지않는다
+    }, 500);
+   
+});
+
 

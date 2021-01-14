@@ -509,9 +509,9 @@ p{
 .project__descript h3::after{
     display: block;
     position: relative;
-    left: 43%;
+    left: 30%;
     content: '';
-    width: 25px;
+    width: 50px;
     height: 2px;
     margin-top: 8px;
     background-color: var(--color-dark-white);
@@ -589,6 +589,9 @@ p{
         width: 100%;
         display: none;
     }
+    .navbar__menu.open{
+        display: block;
+    }
     .about{
         display: none;
     }
@@ -613,7 +616,7 @@ p{
         font-size:24px;
     }
    .home__description{
-    font-size:15px
+    font-size:15px;
 
    }
    .home__contact{

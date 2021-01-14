@@ -24,10 +24,19 @@ navbarMenu.addEventListener('click', (event) =>{ // 클릭 시
     if(link == null){ // 링크가 없다면 리턴 
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
+
 });
 
 
+// 모바일 메뉴 클릭 시 카테고리 보이게 하는 코드
+
+
+const navbarToggleBtn = document.querySelector('.navbar__toggleBtn');
+navbarToggleBtn.addEventListener('click', () =>{
+    navbarMenu.classList.toggle('open');
+});
 
 // contactBtn 클릭시 contact 메뉴로 이동 
 

@@ -78,11 +78,20 @@ const projectContainer = document.querySelector('.project__view');
 // 프로젝트들을 배열로 가져온다
 const projects = document.querySelectorAll('.project');
 
+// 프로젝트 버튼 클릭시
 workBtnContainer.addEventListener('click', (e) =>{
     const filter = e.target.dataset.filter  || e.target.parentNode.dataset.filter; // 데이터가 없다면 parentNode의 데이터 필터 값을 사용함// 데이터 필터 값을 받아온다.
     if(filter == null){
         return;
     }
+    //이전 선택 버튼의 셀렉션을 없애고 다음 선택버튼의 셀렉션 생성
+    const active = document.querySelector('.category__btn.selected');
+    // node의 이름이 클릭된것이 버튼이면  그대로 e.target를 사용하고 아닐경우 span이 클릭 될 경우엔 parentnode를 사용하여 부모노드인 button 선택
+    active.classList.remove('selected');
+    const target=e.target.nodeName === 'BUTTON' ? e.target: e.target.parentNode;
+    target.classList.add('selected');
+
+
     projectContainer.classList.add('anim-out'); // 에니메이션 등록
     projects.forEach((project) =>{
         console.log(project.dataset.type);

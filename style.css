@@ -168,7 +168,7 @@ p{
     background: url(./img/home-background.png) center/cover no-repeat;
     text-align: center;
     height: 900px;
-    
+   
 }
 
 
@@ -182,16 +182,43 @@ p{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+   
 }
 .home__title{
-    margin-bottom: 30px;
-    margin-top: auto;
+    display: none;
 }
 
-.home__title,
+/*title 실질적 보여주는곳 */
+.typing {
+    /*       position: absolute;*/
+    display: inline-block;
+    animation-name: cursor;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    border-right: 1px solid #ccc;
+    color: var(--color-light-white);
+    margin-bottom: 30px;
+        margin-top: auto;
+  }
+ 
+  @keyframes cursor {
+    0% {
+      border-right: 1px solid #fff;
+    }
+    50% {
+      border-right: 1px solid #000;
+    }
+    100% {
+      border-right: 1px solid #fff;
+    }
+  }
+
+
+
 .home__description{
     color:var(--color-light-white);
 }
+
 
 
 
@@ -573,7 +600,7 @@ p{
 
 /*For bleow 768px screen width*/
 @media screen and (max-width: 768px){
-   
+  
     
     .navbar__toggleBtn{
         display: block;
@@ -605,23 +632,22 @@ p{
         height: 750px;
     }
     .home_textbox{
-      
         width:100%;
-        
-        
     }
 
-    .home__title{
-       
-        font-size:24px;
-    }
    .home__description{
     font-size:15px;
-
    }
+
    .home__contact{
     display: none;
     }
+    
+   .typing{
+       font-size: 24px;
+   }
+    
+    
     /*m_about*/
     #m_about{
         display: flex;
@@ -713,5 +739,12 @@ p{
    }
    #contact{
        height: 530px;
+   }
+   .arrow-up{
+    bottom:30px;
+    right: 20px;
+    width:40px;
+    height: 40px;
+    font-size: 25px;
    }
 }
